@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct  3 14:40:45 2020
-
-@author: marinaduarte
-"""
-
 import csv
 
 
@@ -44,12 +36,12 @@ with open ('/Users/marinaduarte/Documents/python-challenge/PyBank/Resources/budg
         max_pl_change_date = str(date[pl_change.index(max(pl_change))])
         min_pl_change_date = str(date[pl_change.index(min(pl_change))])
 
-
+    #print results
     print("Average Change: $",round(avg_pl_change))
     print("Greatest Increase in Profits:", max_pl_change_date,"($",max_pl_change,")")
     print("Greatest Decrease in Profits:", min_pl_change_date,"($",min_pl_change,")")
 
-
+#other attemps below
 #Calculate the change
 #for row in csvreader:
     #prevmonth_row = csvreader[row[0]]
@@ -85,6 +77,7 @@ with open ('/Users/marinaduarte/Documents/python-challenge/PyBank/Resources/budg
          #print("Greatest Increase in Profits: " + str(greatest_increase(max(change1))))         
          #print("Greatest Increase in Profits: " + str(greatest_increase(min(change1))))
          
+#print results in txt file         
 txtfile = open('/Users/marinaduarte/Documents/python-challenge/PyBank/results.txt', 'w') 
 print("Financial Analysis", file = txtfile)
 print("-----------------------------------", file = txtfile)
